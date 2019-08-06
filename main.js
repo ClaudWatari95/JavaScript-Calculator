@@ -16,6 +16,17 @@ const span = document.querySelectorAll(".close");
 
 const closeButton = document.querySelector(".c");
 
+const myData = document.querySelector("#owner-info");
+
+const showmyInfo = document.querySelector("#firstMenu");
+
+showmyInfo.addEventListener('click', () => {
+    const isOpen = myData.classList.contains('slide-in');
+
+    myData.classList.remove("h");
+
+    myData.setAttribute('class', isOpen ? 'slide-out' : 'slide-in');
+});
 
 const showModal = () => {
   modal.style.display = "block";
@@ -360,22 +371,6 @@ const hideDecimalError = () => {
 
     return false;
 }
-const showDecimalError = () => {
-
-    const decimalerror = document.querySelector(".decimalerror");
-
-    if (document.querySelector("button[data-action = 'decimal']").disabled = true) {
-        decimalerror.style.display = "block";
-    }
-
-    setTimeout(hideDecimalError, 2400);
-
-    return true;
-}
-
-document.querySelector("button[data-action = 'decimal'").addEventListener("click", showDecimalError);
-
-
 
 const exitErrorModal = () => {
     document.querySelector(".decimalerror").style.display = "none";

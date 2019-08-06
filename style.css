@@ -479,3 +479,11 @@ input:focus, textarea:focus, button:focus {
         font-size: 0.7em;
     }
 }
+@media screen and (max-width:400px) {
+    #owner-info {
+        width: 200px;
+    }
+    #firstMenu{
+        margin-right: 40px;
+    }
+}

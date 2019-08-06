@@ -436,7 +436,7 @@ input:focus, textarea:focus, button:focus {
     #firstMenu, #secondMenu {
         position: absolute;
         right: 0;
-        margin :15px 40px 0 0;
+        margin :15px 20px 0 0;
         height: 30px;
         cursor: pointer;
         padding :3px 2px 0 2px;
@@ -482,8 +482,5 @@ input:focus, textarea:focus, button:focus {
 @media screen and (max-width:400px) {
     #owner-info {
         width: 200px;
-    }
-    #firstMenu{
-        margin-right: 30px;
     }
 }

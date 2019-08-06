@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator - Andela Interview Challenge By Claud</title>
+</head>
+<body>
+    <div class="parent-calculator-div">
+
+        <div class="calculator-display">
+             <span class = "firstEntry f">0</span><br>
+             <span class = "operEntry op f"></span><br>
+             <span class = "finalEntry f"></span>
+
+             <span class = "decimalerror">
+                Each value can only have a single decimal point
+                <button id = "exitError">Okay</button>
+             </span>
+
+             <div class = "result"></div>
+        </div>
+
+        <div class="holds-all-keys">
+            <div class="three-by-four">
+                <section>
+                        <button type = "submit" class = "inputKey" value = "">7</button>
+                        <button type = "submit" class = "inputKey" value = "">8</button>
+                        <button type = "submit" class = "inputKey" value = "">9</button>
+                </section>
+
+                <section>
+                        <button type = "submit" class = "inputKey" value = "">4</button>
+                        <button type = "submit" class = "inputKey" value = "">5</button>
+                        <button type = "submit" class = "inputKey" value = "">6</button>
+                </section>
+
+                <section>
+                    <button type = "submit" class = "inputKey" value = "">1</button>
+                    <button type = "submit" class = "inputKey" value = "">2</button>
+                    <button type = "submit" class = "inputKey" value = "">3</button>
+                </section>
+                <section class = "u">
+                    <input type = "submit" class = "inputKey hiddenKey" value = "hide">
+                    <button type = "submit" class = "inputKey" value = "">0</button>
+                    <button type = "submit" class = "inputKey hiddenKey" value = "hide"></button>
+                </section>
+                <section>
+                    <button type = "submit" class = "inputKey ce" value = "" data-action = "clear">CE</button>
+                    <button type = "submit" class = "inputKey" value = "" data-action = "decimal">.</button>
+                    <button type = "submit" class = "inputKey eq" value = "" data-action = "calculate">=</button>
+                </section>
+
+            <div class="one-by-four">
+                <section>
+                        <button type = "submit" class = "operationKey" value = "" data-action = "multiply">x</button>
+                        <button type = "submit" class = "operationKey" value = "" data-action = "divide">/</button>
+                        <button type = "submit" class = "operationKey" value = "" data-action = "subtract">-</button>
+                        <button type = "submit" class = "operationKey" value = "" data-action = "add">+</button>
+                </section>
+            </div>
+        </div>
+        </div>
+
+    </div>
+
+    <div class="owner-info">
+       <h5>JavaScript Calculator</h5>
+       <p>Created by Claud</p>
+
+       <button id = "documentorButton">Read Documentation</button>
+    </div>
+
+    <div id="documentor" class="documentation-modal">
+        <div class="documentation-content d-cm">
+            <span class="close">&times;</span>
+            <p>
+                This calculator has been developed by Claud Watari 
+                in partial fulfillment of the requirements for acceptance 
+                into the Andela Kigali cycle 10 bootcamp.
+            </p>
+            <p>
+                Following receipt of the challenge instructions, 
+                implementation of this calculator has been completed using HTML5, CSS3 and JavaScript.
+            </p>
+            <p>
+                The calculator uses submit button for the keys, 
+                both input and operational.
+            </p>
+            <p>
+                At the top is a div contained in a div, and set to occupy
+                both the horizontal and vertical space available from the parent div, which covers roughly 
+                70% of the viewport.
+            </p>
+            <p>
+                This div has been given a css style of text align, which causes the displayed
+                numbers to be on the right of the display. However, the result, 
+                which also contains a logic of the operation, is absolutely positioned to 
+                display at the bottom of the display area.
+            </p>
+            <p>
+                Every input key except for the number inputs, has an attribute of data-value, 
+                which helps the javascript 
+                identify which button has been clicked, and its function.
+            </p>
+
+            <button id = "moreDocumentationToOne">Read More&hellip;</button>
+        </div>
+        
+        <div class="documentation-content d-cf">
+            <span class="close">&times;</span>
+            <p>
+                There are three span elements within the display, each holds the operation values.
+                The top span holds the first value, the second span holds the operation sign
+                while the last span holds the last value.
+            </p>
+            <p>
+                When the CE button is clicked, it checks whether
+                there are any inputs to clear.
+                If there are none, it displays a "All Clear" message.
+                Otherwise it displays a "Clear Entries" message.
+            </p>
+            <p>
+                When the equal button is clicked,
+                it checks that there are valid inputs for calculation.
+                It then checks the value in the first span element 
+                and whether it is a decimal. It checks the sign in the second span 
+                and finally the value in the last span and whether it has a decimal.
+            </p>
+            <p>
+                It uses the operation sign to compute the values. For example,
+                if the sign is an addition, denoted by +, it adds the first value with the second value.
+                Eg, if the first value is 4 and the second value is 7, with an addition sign,
+                it adds 4 and 7 and returns 11.
+            </p>
+            <p>
+                The operation symbols have a data-value attribute which is checked by the JavaScript 
+                to understand what the computation type will be.
+            </p>
+
+            <button id = "moreDocumentationToSecond">Read More&hellip;</button>
+        </div>
+        <div class="documentation-content d-cs">
+                <span class="close">&times;</span>
+            <p>
+                The solution, along with the logic of the problem are shown in the bottom left 
+                of the display div.
+            </p>
+            <p>
+                When the equal sign is clicked, it replaces the first value with the answer from 
+                the last computation for ease of further calculation. This is only to allow 
+                for ease of more calculation.
+            </p>
+            <p>
+                Do not worry, your original problem is to be seen at the bottom left of the display,
+                colored green.
+            </p>
+
+            <button class = "c">Close</button>
+        </div>
+
+    </div>
+<script src="main.js"></script>
+</body>
+</html>

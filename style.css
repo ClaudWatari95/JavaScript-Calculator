@@ -481,6 +481,6 @@ input:focus, textarea:focus, button:focus {
 }
 @media screen and (max-width:400px) {
     #owner-info {
-        width: 200px;
+        width: 250px;
     }
 }

@@ -1,0 +1,324 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: rgb(31, 30, 30);
+    margin: 0;
+}
+
+.parent-calculator-div {
+    width: 76%;
+    position: relative;
+}
+
+.calculator-display {
+    background: rgb(223, 223, 223);
+    width: 100%;
+    height: 300px;
+    margin-bottom: 50px;
+    padding-right: 6px;
+    text-align: right;
+    position: relative;
+}
+
+.f {
+    font-size: 4em;
+}
+
+.decimalerror {
+    font-size: 1.6em;
+    line-height: 140%;
+    color: rgb(255, 0, 0);
+    position: fixed;
+    background: rgb(158, 156, 156);
+    border: 2px solid rgb(58, 58, 58);
+    padding-top: 9%;
+    left: 0;
+    top: 0;
+    margin: 110px 0 0 30%;
+    height: 130px;
+    width: 38%;
+    min-height: 270px;
+    text-align: center;
+    border-radius: 5px;
+    display: none;
+    animation-name: animateError;
+    -webkit-animation-name: animateError;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    z-index: 9;
+}
+
+@keyframes animateError {
+    from {
+        margin-top: 0;
+        opacity: 0;
+    }
+    to {
+        margin-top: 110px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes animateError {
+    from {
+        margin-top: 0;
+        opacity: 0;
+    }
+    to {
+        margin-top: 110px;
+        opacity: 1;
+    }
+}
+
+#exitError {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0 0 70px 87px;
+    background: rgb(146, 131, 48);
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 4px 6px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#res {
+    resize: none;
+    background: transparent;
+    border: none;
+    width: 100%;
+    height: 100%;
+    font-size: 4em;
+    letter-spacing: 1.3px;
+}
+
+.three-by-four section {
+    /* background: rgb(223, 223, 223); */
+    width: 74%;
+    margin-left: 1%;
+}
+
+.inputKey {
+    width: 32.4%;
+    height: 50px;
+    margin-bottom: 10px;
+    margin-right: 3px;
+    font-size: 2em;
+    background: rgb(214, 214, 214);
+    border: 2px solid rgb(235, 230, 230);
+    border-radius: 3px;
+}
+
+.inputKey:hover {
+    background: rgb(238, 235, 235);
+}
+
+.hiddenKey {
+    visibility: hidden;
+}
+
+.ce {
+    background: rgb(165, 27, 27);
+    border: 1px solid rgb(100, 100, 100);
+    color: rgb(235, 230, 230);
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+.ce:hover {
+    background: rgb(165, 27, 27);
+    border: 1px solid rgb(100, 100, 100);
+    opacity: 0.9;
+}
+
+.eq {
+    background: rgb(114, 113, 113);
+    border: 1px solid rgb(190, 190, 190);
+    opacity: 0.8;
+}
+
+.eq:hover {
+    background: rgb(114, 113, 113);
+    border: 1px solid rgb(190, 190, 190);
+    opacity: 1;
+}
+
+.one-by-four {
+    position: absolute;
+    right: 0;
+    top: 350px;
+}
+
+.operationKey {
+    display: block;
+    width: 100px;
+    height: 71px;
+    margin: 0 0 3px 0;
+    font-size: 2.5em;
+    background: rgb(214, 214, 214);
+    border: 2px solid rgb(235, 230, 230);
+}
+
+.operationKey:hover {
+    background: rgb(238, 235, 235);
+}
+
+input:focus, textarea:focus, button:focus {
+    outline: none !important;
+}
+
+.owner-info {
+    position: absolute;
+    width: 20%;
+    right: 0;
+    top: 0;
+    margin: 40px 17px 0 0;
+    text-align: center;
+}
+
+.owner-info h4 {
+    color: rgb(161, 146, 146);
+    font-weight: 700;
+    font-size: 1.7em;
+}
+
+.owner-info h5 {
+    margin-top: 90px;
+    color: rgb(190, 190, 190);
+    font-size: 1.3em;
+}
+
+.owner-info p {
+    color: rgb(190, 190, 190);
+    font-weight: 700;
+}
+
+.owner-info button {
+    margin-top: 130px;
+    padding: 6px;
+    font-size: 1.5em;
+    width: 100%;
+    height: 50px;
+    background: rgb(36, 126, 126);
+    border: 1px solid rgb(190, 190, 190);
+    color: rgb(238, 235, 235);
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.owner-info button:hover {
+    opacity: 0.9;
+}
+
+.documentation-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+  }
+ 
+  .documentation-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 70%;
+    position: relative;
+    height: 470px;
+  }
+
+  .documentation-content p {
+      width: 80%;
+      line-height: 140%;
+  }
+  
+  .documentation-content button {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: transparent;
+      border: 2px solid rgb(190, 190, 190);
+      padding: 6px 13px;
+      font-size: 1.1em;
+      cursor: pointer;
+  }
+
+  .d-cf, .d-cs {
+      display: none;
+  }
+
+  .close {
+    color: rgb(161, 146, 146);
+    position: absolute;
+    right: 10px;
+    top: 6px;
+    font-size: 2em;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: rgb(2, 2, 2);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .u {
+      margin-top: -14px;
+  }
+
+  .op {
+      color: rgb(146, 131, 48);
+  }
+
+  .result {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      color: rgb(87, 146, 48);
+      font-size: 1.6em;
+  }
+
+@media screen and (max-width: 1285px) {
+    .inputKey {
+        width: 32%;
+    }
+    .documentation-content {
+        font-size: 0.9em;
+    }
+}
+@media screen and (max-width: 1203px) {
+    .parent-calculator-div {
+        width: 72%;
+    }
+    .owner-info {
+        width: 23.5%;
+    }
+    #documentorButton {
+        font-size: 1.1em;
+    }
+}
+@media screen and (max-width: 1019px) {
+    #documentorButton {
+        font-size: 1em;
+    }
+}
+@media screen and (max-width: 976px) {
+    .inputKey {
+        width: 30%;
+        font-size: 1.3em;
+    }
+    .f {
+        font-size: 3em;
+    }
+    .parent-calculator-div {
+        width: 70%;
+    }
+}
